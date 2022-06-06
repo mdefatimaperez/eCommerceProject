@@ -1,0 +1,18 @@
+button{
+    background-color: grey;
+}
+button a {
+    color:black;
+    font-family: monospace;
+    text-decoration: none;
+}
+button a:hover{
+    color :cornsilk;
+}
+p {
+    color: black;
+    font-family: monospace;
+    align-items: center;
+    padding:1.50rem;
+    
+}
