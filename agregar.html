@@ -5,28 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Gardenia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tienda Potrero</h1>
-    <button type="submit"><a href="index.html">Inicio</a></button>
-    <button type="submit"><a href="listarconcard.php">Listar ropa</a></button>
+    <h1>Gardenia</h1>
+
+    <button type="submit"><a href="cliente.php">Listar productos</a></button>
   
-    <h2>Agregar ropa</h2>
-    <p>Ingrese los datos de la prenda.</p>
+    <h2>Agregar productos</h2>
+    <p>Ingrese los datos del producto , no te olvides de cargar la imagen ❗</p>
 
 
     <form method="POST" action="agregar.php" enctype="multipart/form-data">
-        <label>Tipo de prenda</label>
-        <input type="text" name="tipoprenda" placeholder="Tipo de prenda" required>
+        <label>Tipo de producto</label>
+        <input type="text" name="tipoproducto" placeholder="Tipo de producto" required>
         <label>Marca</label>
         <input type="text" name="marca" placeholder="Marca" required>
-        <label>Talle</label>
-        <input type="text" name="talle" placeholder="Talle" required>
         <label>Precio</label>
         <input type="text" name="precio" placeholder="Precio" required>
         <label>Imagen</label>
-        <input type="file" name="imagen" placeholder="imagen" required >
+        <input type="file" name="imagen" placeholder="Imagen" required >
         <input type="submit" name="submit" value="Ingresar">
     </form>
 

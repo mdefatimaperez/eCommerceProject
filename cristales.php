@@ -9,7 +9,7 @@
   <title>🌱 Gardenia</title>
 </head>
 <body>
-  <h1>Gardenia</h1>
+<h1>Gardenia</h1>
   <br>
    
   <button type="submit"><a href="cliente.php">Todo</a></button>
@@ -20,19 +20,19 @@
 
   <br>
   <br>
-  <h2>Productos de oferta</h2>
+  <h2>Cristales</h2>
   <p>Stock actual de la tienda:</p>
+
 
   <section>
     <div class="container">
       <div class="row">
 
-        
-        <?php
+      <?php
   
   $conexion = mysqli_connect("127.0.0.1", "root", "");
 
-  $consulta = "SELECT * FROM `productos` WHERE `precio`<= 1000 ";
+  $consulta="SELECT * FROM `productos` WHERE `tipodeproducto` LIKE 'cristal'";
   mysqli_select_db($conexion, "stocktienda"); 
   $datos= mysqli_query($conexion, $consulta);
 
@@ -49,6 +49,7 @@
     </div>
 
   <?php } ?>
+
       </div>
     </div>
   </section>

@@ -1,18 +1,101 @@
-button{
-    background-color: grey;
+/*****************************************************FONT***************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
 }
-button a {
-    color:black;
-    font-family: monospace;
+a{
     text-decoration: none;
+    color: rgb(224, 146, 185);
 }
-button a:hover{
-    color :cornsilk;
+a:hover{
+    color:rgb(63, 175, 110);
 }
-p {
+
+/******************************************************************NAV*******************************************************/
+.navbar{
+    background-color: rgb(164, 199, 178);
+
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+    color: antiquewhite;
+}
+.navgardenia{
+    font-family: 'Fascinate', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 1em;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 0.2em;
     color: black;
-    font-family: monospace;
-    align-items: center;
-    padding:1.50rem;
-    
+
 }
+
+@media (max-width:720px){
+    .navpotrerito{
+        padding: unset;
+    }
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-collapse{
+    flex-grow:unset;
+}
+
+.nav-item{
+    font-size: 1.20em;
+}
+
+
+
+/***************************************************************CAROUSEL*************************************************************/
+.carousel-item img{
+    max-height: 25rem;
+	object-fit: auto;
+}
+
+@media (max-width:720px){
+    #carouselExampleCaptions{
+        display: none;
+    }
+}
+
+/*********************************************MAIN -- CADS *****************************************************************************/
+
+#main{
+padding: 2em;
+
+}
+.card{
+    padding: 1em;
+}
+
+/***********************************************FOOTER****************************************************************************/
+footer{
+    margin-top: 5rem;
+    width: 100%;
+    height: 10rem;
+    background-color:#454544;
+    color:#839192; 
+    display: flex;
+    align-items: center;
+
+}
+.carpincho {
+    max-height: 7rem;
+    max-width: 7rem;
+        border-radius: 50%;
+        border: 5px solid #000000;
+        
+    }
+
+ 
+    @media(max-width:720px){
+       .carpincho{
+           display:none;
+       }
+    }

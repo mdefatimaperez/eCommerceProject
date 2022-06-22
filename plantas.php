@@ -9,7 +9,7 @@
   <title>🌱 Gardenia</title>
 </head>
 <body>
-  <h1>Gardenia</h1>
+<h1>Gardenia</h1>
   <br>
    
   <button type="submit"><a href="cliente.php">Todo</a></button>
@@ -20,35 +20,35 @@
 
   <br>
   <br>
-  <h2>Productos de oferta</h2>
+  <h2>Plantas</h2>
   <p>Stock actual de la tienda:</p>
 
   <section>
     <div class="container">
       <div class="row">
 
-        
         <?php
   
-  $conexion = mysqli_connect("127.0.0.1", "root", "");
+        $conexion = mysqli_connect("127.0.0.1", "root", "");
 
-  $consulta = "SELECT * FROM `productos` WHERE `precio`<= 1000 ";
-  mysqli_select_db($conexion, "stocktienda"); 
-  $datos= mysqli_query($conexion, $consulta);
+        $consulta="SELECT * FROM `productos` WHERE `tipodeproducto` LIKE 'planta'";
+        mysqli_select_db($conexion, "stocktienda"); 
+        $datos= mysqli_query($conexion, $consulta);
 
 
-  while ($reg = mysqli_fetch_array($datos)) {?>
-    <div class="card col-sm-12 col-md-6 col-lg-3">
-      <img class="card-img-top" src="data:image/jpg;base64, <?php echo base64_encode($reg['imagen'])?>" alt="" width="200px" height="200px")>
+        while ($reg = mysqli_fetch_array($datos)) {?>
+          <div class="card col-sm-12 col-md-6 col-lg-3">
+            <img class="card-img-top" src="data:image/jpg;base64, <?php echo base64_encode($reg['imagen'])?>" alt="" width="200px" height="200px")>
 
-        <h3 class="card-title" style="width: 100%; font-size:25px;"><?php echo ucwords($reg['nombre']) ?></h3>
-        <span>$ <?php echo $reg['precio']; ?></span>
-        <span> <?php echo $reg['tipodeproducto']; ?></span>
-        <td><a href="borrar.php?id=<?php echo $reg['id'];?>">Borrar</a></td>
-        <td><a href="modificar.php?id=<?php echo $reg['id'];?>">Editar</a></td>
-    </div>
+              <h3 class="card-title" style="width: 100%; font-size:25px;"><?php echo ucwords($reg['nombre']) ?></h3>
+              <span>$ <?php echo $reg['precio']; ?></span>
+              <span> <?php echo $reg['tipodeproducto']; ?></span>
+              <td><a href="borrar.php?id=<?php echo $reg['id'];?>">Borrar</a></td>
+              <td><a href="modificar.php?id=<?php echo $reg['id'];?>">Editar</a></td>
+          </div>
 
-  <?php } ?>
+        <?php } ?>
+
       </div>
     </div>
   </section>
